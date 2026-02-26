@@ -15,6 +15,13 @@
       "when": 1772056113785,
       "tag": "0001_redundant_daredevil",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772063881159,
+      "tag": "0002_giant_black_bird",
+      "breakpoints": true
     }
   ]
 }

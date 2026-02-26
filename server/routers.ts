@@ -2,6 +2,7 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
+import { sallaRouter } from "./routers/salla";
 import { invokeLLM } from "./_core/llm";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
@@ -485,7 +486,7 @@ const chatRouter = router({
 
 أسلوبك: ودود، احترافي، ومتحمس. استخدم اللغة العربية الفصحى مع لمسة عصرية.`;
 
-      const messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
+      const messages: { role: "system" | "user" | "assistant"; content: string }[] = [
         { role: "system", content: systemPrompt },
         ...(input.history || []).map((h) => ({
           role: h.role as "user" | "assistant",
@@ -589,6 +590,7 @@ export const appRouter = router({
   analytics: analyticsRouter,
   chat: chatRouter,
   assets: assetsRouter,
+  salla: sallaRouter,
 });
 
 export type AppRouter = typeof appRouter;

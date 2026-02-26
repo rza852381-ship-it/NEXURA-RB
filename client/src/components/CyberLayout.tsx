@@ -5,7 +5,7 @@ import { useState } from "react";
 import {
   LayoutDashboard, Search, Megaphone, Share2, DollarSign,
   BarChart3, Bot, Settings, LogOut, Zap, Menu, X,
-  ShoppingBag, Bell, ChevronLeft
+  ShoppingBag, Bell, ChevronLeft, Store
 } from "lucide-react";
 
 const navItems = [
@@ -16,6 +16,7 @@ const navItems = [
   { icon: <DollarSign className="w-4 h-4" />, label: "المحاسب المالي", path: "/finance" },
   { icon: <BarChart3 className="w-4 h-4" />, label: "التحليلات", path: "/analytics" },
   { icon: <ShoppingBag className="w-4 h-4" />, label: "المتاجر", path: "/stores" },
+  { icon: <Store className="w-4 h-4" />, label: "تكامل سلة", path: "/salla" },
   { icon: <Bot className="w-4 h-4" />, label: "المساعد الذكي", path: "/assistant" },
 ];
 

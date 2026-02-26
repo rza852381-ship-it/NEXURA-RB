@@ -32,10 +32,12 @@ export const stores = mysqlTable("stores", {
   userId: int("userId").notNull(),
   name: varchar("name", { length: 255 }).notNull(),
   url: varchar("url", { length: 500 }),
-  platform: mysqlEnum("platform", ["shopify", "woocommerce", "custom", "other"]).default("custom"),
+  platform: mysqlEnum("platform", ["shopify", "woocommerce", "salla", "custom", "other"]).default("custom"),
   logoUrl: varchar("logoUrl", { length: 500 }),
   description: text("description"),
   isActive: boolean("isActive").default(true),
+  apiKey: text("apiKey"),
+  status: mysqlEnum("status", ["active", "inactive", "pending"]).default("pending"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

@@ -70,4 +70,13 @@
 - [x] بناء صفحة تكامل سلة (SallaIntegration.tsx)
 - [x] عرض معلومات المتجر والمنتجات والطلبات
 - [x] ربط إحصائيات سلة بلوحة التحكم
-- [ ] رفع التحديثات على GitHub
+- [x] رفع التحديثات على GitHub
+
+## نظام OAuth سلة الكامل
+- [x] جدول salla_connections في قاعدة البيانات (access_token, refresh_token, expires_at)
+- [x] endpoint /api/salla/oauth/start لبدء عملية OAuth
+- [x] endpoint /api/salla/oauth/callback لاستقبال التوكن من سلة
+- [x] نظام تجديد التوكن تلقائياً (refresh token)
+- [x] صفحة إدارة متاجر سلة المربوطة
+- [x] زر "ربط متجر سلة" بتصميم سايبربانك
+- [x] رفع التحديثات على GitHub

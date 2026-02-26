@@ -12,6 +12,7 @@ import Finance from "./pages/Finance";
 import Stores from "./pages/Stores";
 import AIAssistant from "./components/AIAssistant";
 import SallaIntegration from "./pages/SallaIntegration";
+import SallaConnect from "./pages/SallaConnect";
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function Router() {
       <Route path={"/finance"} component={Finance} />
       <Route path={"/stores"} component={Stores} />
       <Route path={"/salla"} component={SallaIntegration} />
+      <Route path={"/salla-connect"} component={SallaConnect} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

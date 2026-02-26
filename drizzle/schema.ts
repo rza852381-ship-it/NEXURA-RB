@@ -178,3 +178,26 @@ export const marketingAssets = mysqlTable("marketing_assets", {
 
 export type MarketingAsset = typeof marketingAssets.$inferSelect;
 export type InsertMarketingAsset = typeof marketingAssets.$inferInsert;
+
+// ==================== جدول اتصالات سلة OAuth ====================
+export const sallaConnections = mysqlTable("salla_connections", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  merchantId: varchar("merchantId", { length: 100 }),
+  storeName: varchar("storeName", { length: 255 }),
+  storeEmail: varchar("storeEmail", { length: 320 }),
+  storeDomain: varchar("storeDomain", { length: 500 }),
+  storePlan: varchar("storePlan", { length: 50 }),
+  storeAvatar: varchar("storeAvatar", { length: 500 }),
+  accessToken: text("accessToken").notNull(),
+  refreshToken: text("refreshToken"),
+  tokenType: varchar("tokenType", { length: 50 }).default("Bearer"),
+  expiresAt: timestamp("expiresAt"),
+  scope: text("scope"),
+  isActive: boolean("isActive").default(true),
+  connectedAt: timestamp("connectedAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SallaConnection = typeof sallaConnections.$inferSelect;
+export type InsertSallaConnection = typeof sallaConnections.$inferInsert;

@@ -3,6 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { sallaRouter } from "./routers/salla";
+import { sallaOAuthRouter } from "./routers/sallaOAuth";
 import { invokeLLM } from "./_core/llm";
 import { notifyOwner } from "./_core/notification";
 import { getDb } from "./db";
@@ -591,6 +592,7 @@ export const appRouter = router({
   chat: chatRouter,
   assets: assetsRouter,
   salla: sallaRouter,
+  sallaOAuth: sallaOAuthRouter,
 });
 
 export type AppRouter = typeof appRouter;

@@ -1,0 +1,25 @@
+{
+  "name": "nexora",
+  "version": "1.0.0",
+  "description": "NEXORA AI Marketing & Analytics System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "nexora",
+    "ai",
+    "marketing",
+    "salla",
+    "analytics"
+  ],
+  "author": "NEXORA",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

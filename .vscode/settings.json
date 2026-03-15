@@ -1,4 +1,2 @@
-{
 npm init -y
-npm install express axios dotenv "comments.useRelativeTime": true
-}
+npm install express axios dotenv cors

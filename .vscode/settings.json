@@ -1,0 +1,4 @@
+{
+npm init -y
+npm install express axios dotenv "comments.useRelativeTime": true
+}
